@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dev.sales.order.dao.Customer" table="CUSTOMER">
+		<id name="customerNum" column="CUST_NBR" type="int">
+			<generator class="native" />
+		</id>
+		<property name="code" column="CODE" type="string" />
+		<property name="name" column="NAME" type="string" />
+		<property name="address" column="ADDRESS" type="string" />
+		<property name="phone1" column="PHONE1" type="string" />
+		<property name="phone2" column="PHONE2" type="string" />
+		<property name="currentCredit" column="CREDIT" type="double" />
+		<property name="creditLimit" column="CREDIT_LIMIT" type="double" />
+	</class>
+</hibernate-mapping>
