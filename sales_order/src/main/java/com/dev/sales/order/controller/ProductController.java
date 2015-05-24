@@ -15,11 +15,12 @@ import com.dev.sales.order.model.Status;
 import com.dev.sales.order.service.ProductService;
 
 @RestController
+@RequestMapping(value = "/product")
 public class ProductController {
 	@Autowired
 	private ProductService productService;
 
-	@RequestMapping(value = "/product/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody
 	Status addProduct(@RequestBody Product product) {
 		try {
@@ -30,7 +31,7 @@ public class ProductController {
 		}
 	}
 
-	@RequestMapping(value = "/product/list", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/list", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody
 	List<Product> getProducts() {
 		List<Product> products = null;

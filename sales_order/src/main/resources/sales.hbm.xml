@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dev.sales.order.model.Sales" table="SALES">
+		<id name="orderNum" column="ORDER_NBR" type="int">
+			<generator class="native" />
+		</id>
+		<property name="price" column="UNIT_PRICE" type="double" />
+		<property name="quantity" column="QUANTITY" type="int" />
+		<property name="totalPrice" column="TOT_PRICE" type="double" />
+		<many-to-one name="product" column="CODE" unique="true"
+			class="com.dev.sales.order.model.Product" not-null="true"></many-to-one>
+	</class>
+</hibernate-mapping>

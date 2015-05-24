@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="com.dev.sales.order.dao.Customer" table="CUSTOMER">
+	<class name="com.dev.sales.order.model.Customer" table="CUSTOMER">
 		<id name="customerNum" column="CUST_NBR" type="int">
 			<generator class="native" />
 		</id>
